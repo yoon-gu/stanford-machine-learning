@@ -6,3 +6,11 @@
 | Need to choose alpha | No need to choose alpha | 
 |Need many iterations | no need to iterate |
 |work well even when n (# of features) is large | need to compute inv(X^TX) : slow when n is large|
+
+## Models ##
+1. Linear Model
+1. Polynomial Model
+1. Logistic Model
+
+## Remarks ##
+1. Decision Bounadary may be different by choices for our moddels(hypothesis).
