@@ -1,0 +1,1 @@
+* By scaling feature, we can get faster convergen when using gradient decent method.
