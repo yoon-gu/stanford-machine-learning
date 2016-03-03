@@ -17,3 +17,6 @@
 1. Logistic regression을 쓰고, L2 Error를 cost function으로 쓰면 non-convex네요.
 	- 그래서 convex로 만드는 Cose function을 찾아요.
 	- cost function 정하는 건 어렵네 : Convex도 되야하고, 의미적으로도 맞아야하고!
+1. What if multi-classes?
+    - one vs rest : h^i_theta(x) = P(y=i : x=theta) for i = 1, 2, 3, ...
+    - Pick max_i h^i_theta(x)
