@@ -19,7 +19,11 @@ grad = zeros(size(theta));
 
 
 
+a = - y .* log(sigmoid(X*theta));
+b = - (1 - y) .* log(1 - sigmoid(X*theta));
+J = sum(a + b) / m + lambda / (2 * m) * sum(theta(2:end).^2);
 
+grad = X' * (sigmoid(X*theta) - y) / m + lambda * [0; theta(2:end)] / m;
 
 
 % =============================================================

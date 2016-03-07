@@ -17,7 +17,8 @@ p = zeros(m, 1);
 
 
 
-
+val = X * theta;
+p(val > 0) = 1;
 
 
 
