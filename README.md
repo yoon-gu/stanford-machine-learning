@@ -20,3 +20,5 @@
 1. What if multi-classes?
     - one vs rest : h^i_theta(x) = P(y=i : x=theta) for i = 1, 2, 3, ...
     - Pick max_i h^i_theta(x)
+1. Why should we use non-linear machine learning? 
+    - the example : car detection (image is a just matrix, it cannot be a feature for ML)
