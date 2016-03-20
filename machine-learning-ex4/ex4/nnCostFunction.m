@@ -63,22 +63,14 @@ Theta2_grad = zeros(size(Theta2));
 %
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+X = [ones(m, 1), X];
+Z1 = sigmoid(Theta1 * X');
+Z1 = [ones(m,1), Z1'];
+Z2 = sigmoid(Theta2 * Z1');
+Z = Z2';
+Y = sparse(1:m, y, 1);
+J = sum(sum(-Y .* log(Z) - ( 1 - Y).*log(1-Z))) / m + ...
+    lambda / (2*m) * (sum(Theta1(26:end).^2) + sum(Theta2(11:end).^2));
 
 % -------------------------------------------------------------
 
