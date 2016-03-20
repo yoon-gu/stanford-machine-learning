@@ -69,8 +69,10 @@ Z1 = [ones(m,1), Z1'];
 Z2 = sigmoid(Theta2 * Z1');
 Z = Z2';
 Y = sparse(1:m, y, 1);
+Theta1 = Theta1(:, 2:end);
+Theta2 = Theta2(:, 2:end);
 J = sum(sum(-Y .* log(Z) - ( 1 - Y).*log(1-Z))) / m + ...
-    lambda / (2*m) * (sum(Theta1(26:end).^2) + sum(Theta2(11:end).^2));
+    lambda / (2*m) * (sum(Theta1(:).^2) + sum(Theta2(:).^2));
 
 % -------------------------------------------------------------
 
