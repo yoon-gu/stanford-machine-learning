@@ -63,19 +63,36 @@ Theta2_grad = zeros(size(Theta2));
 %
 
 
-X = [ones(m, 1), X];
-Z1 = sigmoid(Theta1 * X');
-Z1 = [ones(m,1), Z1'];
-Z2 = sigmoid(Theta2 * Z1');
-Z = Z2';
+A1 = [ones(m, 1), X];
+Z2 = Theta1 * A1';
+A2 = sigmoid(Z2);
+A2 = [ones(m,1), A2'];
+Z3 = Theta2 * A2';
+A3 = sigmoid(Z3);
+A3 = A3';
 Y = sparse(1:m, y, 1);
-Theta1 = Theta1(:, 2:end);
-Theta2 = Theta2(:, 2:end);
-J = sum(sum(-Y .* log(Z) - ( 1 - Y).*log(1-Z))) / m + ...
-    lambda / (2*m) * (sum(Theta1(:).^2) + sum(Theta2(:).^2));
+Theta1_ = Theta1(:, 2:end);
+Theta2_ = Theta2(:, 2:end);
+J = sum(sum(-Y .* log(A3) - ( 1 - Y).*log(1-A3))) / m + ...
+    lambda / (2*m) * (sum(Theta1_(:).^2) + sum(Theta2_(:).^2));
 
 % -------------------------------------------------------------
-
+for t = 1:m
+    a_1 = A1(t, :)';
+    z_2 = Z2(:, t);
+    a_2 = A2(t, :)';
+    z_3 = Z2(:, t);
+    a_3 = A3(t, :)';
+    
+    yy = Y(t, :)';
+    d3 = a_3 - yy;
+    d2 = (Theta2' * d3) .* sigmoidGradient([1;z_2]);
+    
+    Theta1_grad = Theta1_grad + d2(2:end) * a_1';
+    Theta2_grad = Theta2_grad + d3 * a_2';
+end
+Theta1_grad = Theta1_grad / m;
+Theta2_grad = Theta2_grad / m;
 % =========================================================================
 
 % Unroll gradients
