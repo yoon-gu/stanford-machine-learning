@@ -23,10 +23,17 @@
 1. Why should we use non-linear machine learning? 
     - the example : car detection (image is a just matrix, it cannot be a feature for ML)
 
-## What can we do more when we have unacceptably large errors in its predictions?
+## What can we do more when we have unacceptably large errors in its predictions? ##
 1. Get more training examples
 1. Try Smaller sests of features
 1. Try getting additional features
 1. Try adding polynomial features
 1. Try decreasing lambda
 1. Try increasing lambda
+
+## Training / Cross Validation / Test ##
+1. ratio = 3:1:1
+1. Min J(Theta)
+1. Compute J_cv(Theta)
+1. Choose a model for the minimal value
+1. Estimat generalization error J_test(Theta)
