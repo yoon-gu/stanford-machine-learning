@@ -24,12 +24,12 @@
     - the example : car detection (image is a just matrix, it cannot be a feature for ML)
 
 ## What can we do more when we have unacceptably large errors in its predictions? ##
-1. Get more training examples
-1. Try Smaller sests of features
-1. Try getting additional features
-1. Try adding polynomial features
-1. Try decreasing lambda
-1. Try increasing lambda
+1. Get more training examples : *Fixes High Variance*
+1. Try Smaller sests of features : *Fixes High Variance*
+1. Try getting additional features : *Fixes High Bias*
+1. Try adding polynomial features : *Fixes High Bias*
+1. Try decreasing lambda : *Fixes High Bias*
+1. Try increasing lambda : *Fixes High Variance*
 
 ## Training / Cross Validation / Test ##
 1. ratio = 3:1:1
@@ -37,3 +37,9 @@
 1. Compute J_cv(Theta)
 1. Choose a model for the minimal value
 1. Estimat generalization error J_test(Theta)
+
+## Bias vs. Variance ##
+1. Compare J_train, J_cv, J_test
+	1. # of features (ex. degree of polynomial)
+	1. penalty term lambda
+	1. training set size
