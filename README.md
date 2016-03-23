@@ -43,3 +43,7 @@
 	1. # of features (ex. degree of polynomial)
 	1. penalty term lambda
 	1. training set size
+
+1. What if Neural networks
+	1. Simple : Prone to underfitting
+	1. Complex : Prone to overfitting
