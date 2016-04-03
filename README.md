@@ -47,3 +47,10 @@
 1. What if Neural networks
 	1. Simple : Prone to underfitting
 	1. Complex : Prone to overfitting
+
+
+# Summary #
+1. Linear Regression
+1. Logistic Regression
+1. Neural Network (Logistic)
+1. Support Vector Machine
