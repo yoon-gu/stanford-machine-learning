@@ -33,7 +33,7 @@ for j = 1:length(Cs)
     errs(j) = mean(double(predictions ~= yval));
 end
 
-[a, b] = min(errs);
+[~, b] = min(errs);
 
 C = Cs(b);
 sigma = sigmas(b);
