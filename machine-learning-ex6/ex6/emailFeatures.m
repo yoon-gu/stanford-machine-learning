@@ -49,7 +49,7 @@ x = zeros(n, 1);
 %
 
 
-
+x = full(sparse(unique(word_indices), 1, 1, n, 1));
 
 
 
