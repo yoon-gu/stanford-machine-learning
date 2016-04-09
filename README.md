@@ -54,3 +54,7 @@
 1. Logistic Regression
 1. Neural Network (Logistic)
 1. Support Vector Machine
+
+## PCA ##
+1. PCA는 new axis를 찾는 것 : projceted data의 error가 minimize되도록
+
