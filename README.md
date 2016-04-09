@@ -57,4 +57,5 @@
 
 ## PCA ##
 1. PCA는 new axis를 찾는 것 : projceted data의 error가 minimize되도록
-
+1. Linear Regression : |y_i - h(x_i)|^2 
+1. PCA : distance to the line(plane)
