@@ -73,3 +73,7 @@
 1. Supervised Learning
     1. Large number of positive and negative examples(not skewed data)
     1. Enough positive examples for algorithm to get a sense of what positive examples are like. (enough information for positive/negative situation)
+
+## Anomaly Detection Problem ##
+1. postive and negative examples evenly mixed in range of confidence interval => try to generate a new feature
+1. In this case, you missed some important feature to determine anomality
