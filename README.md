@@ -59,3 +59,17 @@
 1. PCA는 new axis를 찾는 것 : projceted data의 error가 minimize되도록
 1. Linear Regression : |y_i - h(x_i)|^2 
 1. PCA : distance to the line(plane)
+
+## Anomaly Detection ##
+1. Estimate Probability distribution of a feature
+1. Usually we use normal distribution
+
+## Anomaly Detection vs. Supervised Learning ##
+1. If we have labeled data, what is good choice for anomaly detecting?
+1. Anomaly
+    1. Very small number of positive examples (0-20) (skewed data)
+    1. Large number of negatives : good to estimate probability! (we don't use anomaly for estiation of probability)
+    1. Future anomalies may look nothing like any of the anomalous examples we've seen so far(new anomality)
+1. Supervised Learning
+    1. Large number of positive and negative examples(not skewed data)
+    1. Enough positive examples for algorithm to get a sense of what positive examples are like. (enough information for positive/negative situation)
