@@ -77,3 +77,5 @@
 ## Anomaly Detection Problem ##
 1. postive and negative examples evenly mixed in range of confidence interval => try to generate a new feature
 1. In this case, you missed some important feature to determine anomality
+1. Try to Multivariate Gaussian distribution in case of the below.
+    ![alt text](https://raw.githubusercontent.com/yoon-gu/stanford-machine-learning/master/images/whyweneedmultivariateGaussian.png "Need to try multivariate distribution")
